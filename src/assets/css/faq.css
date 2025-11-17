@@ -1,0 +1,240 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --accent: #0ea5a4;
+  --bg: #ffffff;
+  --muted: #6b7280;
+  --radius: 12px;
+}
+body {
+   background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ==== NAVBAR ===== */
+nav {
+  width: 100%;
+  padding: 1.3rem 6rem;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  z-index: 99;
+
+  /* LOGO NAVBAR */
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #0077ff;
+  }
+
+  /* NAV ITEM */
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+
+    /* TEXT NAVBAR */
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0077ff;
+    }
+  }
+}
+
+
+
+.container {
+    margin: 0 auto;
+    /* background-color: #6b7280; */
+    min-height: 200px;
+}
+
+.isi-content{
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    /* background-color: aqua; */
+    min-height: 400px;
+    margin-top: 80px;
+    align-items: center;
+}
+
+.gambar{
+    img {
+        width: 500px;
+        mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          black 70%,
+          transparent 100%
+        );
+      }
+}
+
+.kanan{
+    width: 50%;
+    /* background: #000; */
+}
+
+.accordion {
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(8, 15, 25, 0.06);
+  overflow: hidden;
+}
+.item + .item {
+  border-top: 1px solid #eef2f7;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+}
+.trigger:focus {
+  outline: 3px solid rgba(14, 165, 164, 0.16);
+  outline-offset: 2px;
+}
+.meta {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.chev {
+  display: inline-grid;
+  place-items: center;
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+.chev svg {
+  width: 18px;
+  height: 18px;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  padding: 0 20px;
+  background: transparent;
+}
+.panel-inner {
+  padding: 14px 0 20px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* when expanded we add a class to rotate icon and set max-height via JS */
+.item[aria-expanded="true"] .chev {
+  transform: rotate(180deg);
+}
+
+
+
+/* Footer */
+.footer {
+  background: #0d0e10;
+  color: #ffffff;
+  padding: 50px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  /* display: flex; */
+  /* grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); */
+  /* gap: 60px; */
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  max-width: 400px;
+}
+
+.footer-section-kanan {
+  display: flex;
+  gap: 100px;
+}
+
+.footer-section h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  opacity: 0.7;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  opacity: 1;
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 15px;
+  color: white;
+  opacity: 0.7;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  opacity: 0.6;
+  font-size: 14px;
+}
