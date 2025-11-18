@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 
@@ -38,7 +39,7 @@ body {
 /* ==== NAVBAR ===== */
 nav {
   width: 100%;
-  padding: 1.3rem 6rem;
+  padding: 7px 6rem;
   background: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -55,6 +56,10 @@ nav {
     font-weight: 700;
     font-size: 1.5rem;
     color: #0077ff;
+
+    img{
+      height: 50px;
+    }
   }
 
   /* NAV ITEM */
@@ -139,6 +144,11 @@ nav {
       font-weight: 600;
       cursor: pointer;
       border: 3px solid #0077ff;
+
+      a{
+        color: #0077ff;
+        text-decoration: none;
+      }
     }
     button {
       /* transition: background 0.3s ease, color 0.3s ease; */
@@ -606,7 +616,7 @@ nav {
 .footer {
   background: #0d0e10;
   color: #ffffff;
-  padding: 50px 20px 20px;
+  padding: 40px 20px 20px;
   font-family: sans-serif;
 }
 
@@ -622,6 +632,12 @@ nav {
 
 .footer-section {
   max-width: 400px;
+
+  .logo{
+    img{
+      height: 60px;
+    }
+  }
 }
 
 .footer-section-kanan {
