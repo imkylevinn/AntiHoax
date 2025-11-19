@@ -64,34 +64,6 @@ framework sehingga mudah dipahami, dimodifikasi, dan dikembangkan.
 -   **CSS3** --- styling dan layout\
 -   **JavaScript (Vanilla)** --- interaktivitas dasar
 
-------------------------------------------------------------------------
-
-## 🤝 Kontribusi
-
-Kontribusi sangat terbuka!\
-Berikut langkah-langkah berkontribusi:\
-1. Fork repositori\
-2. Buat branch baru\
-3. Lakukan perubahan\
-4. Commit dengan pesan jelas\
-5. Lakukan Pull Request
-
-------------------------------------------------------------------------
-
-## 🗺️ Rencana Pengembangan
-
--   Penambahan fitur pengecekan fakta\
--   Integrasi API verifikasi hoaks\
--   Sistem pencarian dan kategori\
--   Halaman edukasi lebih lengkap\
--   Mode gelap (dark mode)
-
-------------------------------------------------------------------------
-
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah **MIT License** (sesuaikan jika
-berbeda).
 
 ------------------------------------------------------------------------
 
