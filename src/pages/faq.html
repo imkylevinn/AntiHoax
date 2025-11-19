@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
 
@@ -25,14 +26,14 @@
     </nav>
 
     <div class="container">
-      <h1 style="margin-bottom: 6px; text-align: center">
+      <h1 style="margin-bottom: 6px; text-align: center" data-aos="fade-up">
         Frequenly Asked Questions
       </h1>
-      <p style="text-align: center">
+      <p style="text-align: center" data-aos="fade-up">
         Temukan semua hal yang paling sering menjadi pertanyaan pada halaman ini
       </p>
       <div class="isi-content">
-        <div class="gambar">
+        <div class="gambar" data-aos="fade-right">
             <img src="/src/assets/img/FAQphoto.svg" alt="">
         </div>
         <div class="kanan">
@@ -42,6 +43,7 @@
               id="faqAccordion"
               role="region"
               aria-label="Contoh Accordion"
+              data-aos="fade-left"
             >
               <div class="item" data-index="0" aria-expanded="false">
                 <button class="trigger" aria-controls="panel-0" id="ctrl-0">
@@ -208,6 +210,14 @@
         <p>© 2025 AntiHoax</p>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+  AOS.init({
+     duration: 1200,
+            once: true,}
+  );
+</script>
 
     <script src="../assets/js/accordion.js"></script>
   </body>

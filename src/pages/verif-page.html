@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -35,7 +36,7 @@
     <!-- Verifikasi Interaktif Section -->
     <section id="verifikasi" class="section section-interactive">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <span class="section-badge">Fitur Interaktif</span>
                 <h2>Verifikasi Berita Sekarang</h2>
                 <p>Saring dulu sebelum berbagi - Cek validitas berita Anda</p>
@@ -190,7 +191,13 @@
         <p>© 2025 AntiHoax</p>
       </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+  AOS.init({
+     duration: 1200,
+            once: true,}
+  );
+</script>
     <script src="../assets/js/verif.js"></script>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
