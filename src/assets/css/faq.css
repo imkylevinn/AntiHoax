@@ -74,7 +74,7 @@ nav {
 
 .isi-content{
     display: flex;
-    gap: 80px;
+    gap: 60px;
     justify-content: center;
     /* background-color: aqua; */
     min-height: 400px;
