@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
     <title>AntiHoax</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="src/css/verif.css" />
-    
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
 
-<body>
-
+  <body>
     <!-- navbar -->
-<nav>
-       <div class="logo"><a href="./index.html">
-             <img src="src/assets/img/LogoAntiHoax.svg" alt="">
+    <nav>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="src/assets/img/LogoAntiHoax.svg" alt="" />
         </a>
-    </div>
+      </div>
       <div class="nav-links">
         <a href="./index.html">Beranda</a>
         <a href="./verif-page.html">Verifikasi Hoax</a>
@@ -31,136 +33,166 @@
       </div>
     </nav>
 
-
-
     <!-- Verifikasi Interaktif Section -->
     <section id="verifikasi" class="section section-interactive">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">Fitur Interaktif</span>
-                <h2>Verifikasi Berita Sekarang</h2>
-                <p>Saring dulu sebelum berbagi - Cek validitas berita Anda</p>
-            </div>
-            <div class="verification-container">
-                <div class="verification-input">
-                    <label for="newsInput">
-                        <i class="fas fa-paste"></i> Paste berita atau informasi yang ingin diverifikasi:
-                    </label>
-                    <textarea id="newsInput" placeholder="Contoh: 'BREAKING NEWS! Pemerintah akan memberikan bantuan Rp 10 juta untuk semua warga. Segera daftar di link ini...'"></textarea>
-                    <button id="startVerification" class="btn btn-primary">
-                        <i class="fas fa-play"></i> Mulai Verifikasi
-                    </button>
-                </div>
-                <div id="questionSection" class="question-section" style="display: none;">
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
-                    </div>
-                    <div id="questionContainer" class="question-container">
-                        <!-- Questions will be inserted here -->
-                    </div>
-                    <div class="question-buttons">
-                        <button id="prevQuestion" class="btn btn-secondary" disabled>
-                            <i class="fas fa-arrow-left"></i> Sebelumnya
-                        </button>
-                        <button id="nextQuestion" class="btn btn-primary">
-                            Selanjutnya <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-                <div id="resultSection" class="result-section" style="display: none;">
-                    <div class="result-card">
-                        <div id="scoreDisplay" class="score-display">
-                            <div class="score-circle">
-                                <svg width="200" height="200">
-                                    <circle cx="100" cy="100" r="90" class="score-bg"></circle>
-                                    <circle cx="100" cy="100" r="90" class="score-progress"></circle>
-                                </svg>
-                                <div class="score-text">
-                                    <span id="scoreNumber">0</span>
-                                    <span class="score-label">/100</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="resultMessage" class="result-message"></div>
-                        <div id="resultRecommendation" class="result-recommendation"></div>
-                        <div class="result-actions">
-                            <button id="shareSimulation" class="btn btn-warning">
-                                <i class="fas fa-share-alt"></i> Lihat Simulasi Jika Tetap Dibagikan
-                            </button>
-                            <button id="verifyAgain" class="btn btn-secondary">
-                                <i class="fas fa-redo"></i> Verifikasi Berita Lain
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-badge">Fitur Interaktif</span>
+          <h2>Verifikasi Berita Sekarang</h2>
+          <p>Saring dulu sebelum berbagi - Cek validitas berita Anda</p>
         </div>
+        <div class="verification-container">
+          <div class="verification-input">
+            <label for="newsInput">
+              <i class="fas fa-paste"></i> Paste berita atau informasi yang
+              ingin diverifikasi:
+            </label>
+            <textarea
+              id="newsInput"
+              placeholder="Contoh: 'BREAKING NEWS! Pemerintah akan memberikan bantuan Rp 10 juta untuk semua warga. Segera daftar di link ini...'"
+            ></textarea>
+            <button id="startVerification" class="btn btn-primary">
+              <i class="fas fa-play"></i> Mulai Verifikasi
+            </button>
+          </div>
+          <div
+            id="questionSection"
+            class="question-section"
+            style="display: none"
+          >
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <div id="questionContainer" class="question-container">
+              <!-- Questions will be inserted here -->
+            </div>
+            <div class="question-buttons">
+              <button id="prevQuestion" class="btn btn-secondary" disabled>
+                <i class="fas fa-arrow-left"></i> Sebelumnya
+              </button>
+              <button id="nextQuestion" class="btn btn-primary">
+                Selanjutnya <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div id="resultSection" class="result-section" style="display: none">
+            <div class="result-card">
+              <div id="scoreDisplay" class="score-display">
+                <div class="score-circle">
+                  <svg width="200" height="200">
+                    <circle cx="100" cy="100" r="90" class="score-bg"></circle>
+                    <circle
+                      cx="100"
+                      cy="100"
+                      r="90"
+                      class="score-progress"
+                    ></circle>
+                  </svg>
+                  <div class="score-text">
+                    <span id="scoreNumber">0</span>
+                    <span class="score-label">/100</span>
+                  </div>
+                </div>
+              </div>
+              <div id="resultMessage" class="result-message"></div>
+              <div
+                id="resultRecommendation"
+                class="result-recommendation"
+              ></div>
+              <div class="result-actions">
+                <button id="shareSimulation" class="btn btn-warning">
+                  <i class="fas fa-share-alt"></i> Lihat Simulasi Jika Tetap
+                  Dibagikan
+                </button>
+                <button id="verifyAgain" class="btn btn-secondary">
+                  <i class="fas fa-redo"></i> Verifikasi Berita Lain
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Simulasi Domino Section -->
-    <section id="simulasi" class="section section-dark" style="display: none;">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Simulasi</span>
-                <h2>Efek Domino Penyebaran Hoax</h2>
-                <p>Lihat bagaimana hoax menyebar dengan cepat</p>
-            </div>
-            <div class="domino-container">
-                <div class="domino-visualization">
-                    <div class="domino-center">
-                        <i class="fas fa-user-circle"></i>
-                        <span>Anda</span>
-                    </div>
-                    <div class="domino-layer layer-1"></div>
-                    <div class="domino-layer layer-2"></div>
-                    <div class="domino-layer layer-3"></div>
-                </div>
-                <div class="domino-stats">
-                    <div class="domino-stat">
-                        <i class="fas fa-users"></i>
-                        <div>
-                            <h3 id="affectedPeople">0</h3>
-                            <p>Orang Terpengaruh</p>
-                        </div>
-                    </div>
-                    <div class="domino-stat">
-                        <i class="fas fa-share-alt"></i>
-                        <div>
-                            <h3 id="shareCount">0</h3>
-                            <p>Kali Dibagikan</p>
-                        </div>
-                    </div>
-                    <div class="domino-stat">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3 id="spreadTime">0</h3>
-                            <p>Jam Menyebar</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="domino-impact">
-                    <h3>Dampak Potensial:</h3>
-                    <ul id="impactList">
-                        <li><i class="fas fa-exclamation-triangle"></i> Kepanikan massal di masyarakat</li>
-                        <li><i class="fas fa-gavel"></i> Potensi tuntutan hukum sebagai penyebar hoax</li>
-                        <li><i class="fas fa-user-slash"></i> Reputasi Anda bisa rusak</li>
-                        <li><i class="fas fa-heart-broken"></i> Merusak kepercayaan orang terdekat</li>
-                        <li><i class="fas fa-money-bill-wave"></i> Kerugian finansial bagi korban</li>
-                    </ul>
-                </div>
-                <button id="stopSimulation" class="btn btn-danger">
-                    <i class="fas fa-stop"></i> Hentikan Simulasi
-                </button>
-            </div>
+    <section id="simulasi" class="section section-dark" style="display: none">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Simulasi</span>
+          <h2>Efek Domino Penyebaran Hoax</h2>
+          <p>Lihat bagaimana hoax menyebar dengan cepat</p>
         </div>
+        <div class="domino-container">
+          <div class="domino-visualization">
+            <div class="domino-center">
+              <i class="fas fa-user-circle"></i>
+              <span>Anda</span>
+            </div>
+            <div class="domino-layer layer-1"></div>
+            <div class="domino-layer layer-2"></div>
+            <div class="domino-layer layer-3"></div>
+          </div>
+          <div class="domino-stats">
+            <div class="domino-stat">
+              <i class="fas fa-users"></i>
+              <div>
+                <h3 id="affectedPeople">0</h3>
+                <p>Orang Terpengaruh</p>
+              </div>
+            </div>
+            <div class="domino-stat">
+              <i class="fas fa-share-alt"></i>
+              <div>
+                <h3 id="shareCount">0</h3>
+                <p>Kali Dibagikan</p>
+              </div>
+            </div>
+            <div class="domino-stat">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3 id="spreadTime">0</h3>
+                <p>Jam Menyebar</p>
+              </div>
+            </div>
+          </div>
+          <div class="domino-impact">
+            <h3>Dampak Potensial:</h3>
+            <ul id="impactList">
+              <li>
+                <i class="fas fa-exclamation-triangle"></i> Kepanikan massal di
+                masyarakat
+              </li>
+              <li>
+                <i class="fas fa-gavel"></i> Potensi tuntutan hukum sebagai
+                penyebar hoax
+              </li>
+              <li>
+                <i class="fas fa-user-slash"></i> Reputasi Anda bisa rusak
+              </li>
+              <li>
+                <i class="fas fa-heart-broken"></i> Merusak kepercayaan orang
+                terdekat
+              </li>
+              <li>
+                <i class="fas fa-money-bill-wave"></i> Kerugian finansial bagi
+                korban
+              </li>
+            </ul>
+          </div>
+          <button id="stopSimulation" class="btn btn-danger">
+            <i class="fas fa-stop"></i> Hentikan Simulasi
+          </button>
+        </div>
+      </div>
     </section>
 
-
-        <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section">
-          <div class="logo"><img src="src/assets/img/LogoAntiHoax.svg" alt=""></div>
+          <div class="logo">
+            <img src="src/assets/img/LogoAntiHoax.svg" alt="" />
+          </div>
           <p>
             Asisten digital untuk membantu kamu memeriksa fakta sebelum
             membagikan informasi.
@@ -180,8 +212,12 @@
           <div class="footer-section">
             <h4>Ikuti Kami</h4>
             <div class="socials">
-              <a href="https://www.instagram.com/raf_radyta_99/" target="_blank">Instagram Arga</a>
-              <a href="https://www.instagram.com/kwlpinn._/" target="_blank">Instagram Kelvin</a>
+              <a href="https://www.instagram.com/raf_radyta_99/" target="_blank"
+                >Instagram Arga</a
+              >
+              <a href="https://www.instagram.com/kwlpinn._/" target="_blank"
+                >Instagram Kelvin</a
+              >
             </div>
           </div>
         </div>
@@ -192,14 +228,16 @@
       </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-     <script>
-  AOS.init({
-     duration: 1200,
-            once: true,}
-  );
-</script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: true,
+      });
+    </script>
     <script src="src/js/verif.js"></script>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-</body>
-
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+  </body>
 </html>
